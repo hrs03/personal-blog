@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Footer';
-import {Container} from 'react-bootstrap';
+import './Gallery.css';
 
-class Footer extends Component {
+class Gallery extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};
@@ -19,13 +18,13 @@ class Footer extends Component {
 
   render() {
     return (
-        <div className="footer-copyright text-center py-3 bg-dark">
-        <Container fluid style={{color: "white"}}>
-          &copy; {new Date().getFullYear()} Copyright: <span>Mohammed Hiras</span>
-        </Container>
+      <div>
+        <h1>
+          gallery
+        </h1>
       </div>
     );
   }
 }
 
-export default Footer;
+export default Gallery;

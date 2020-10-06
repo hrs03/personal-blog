@@ -1,9 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import { Button } from 'react-bootstrap';
-import Header from './components/header/Header'
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Portofolio from './pages/Portofolio/Portofolio';
+import Blog from './pages/Blog/Blog';
+import Gallery from './pages/Gallery/Gallery';
+import { connect } from 'react-redux';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee, faHome, faNewspaper, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +20,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <header className="App-header">
+      
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -27,7 +34,14 @@ function App() {
         >
           <Button variant="primary" className="mr-2">Primary</Button>
         </a>
-      </header>
+        
+      </header> */}
+      <Switch>
+          <Route exact path='/' component={Portofolio} />
+          <Route path='/blog' component={Blog} />
+          <Route path='/gallery' component={Gallery} />
+        </Switch>
+      <Footer />
     </div>
   );
 }

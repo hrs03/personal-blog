@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -20,17 +21,13 @@ class Header extends Component {
 
   render() {
     return (
-      <div>  <Navbar bg="dark" variant="dark">
-      {/* <Navbar.Brand href="#home">Hiras</Navbar.Brand> */}
+      <div>  
+        <Navbar bg="dark" variant="dark">
       <Nav className="mr-auto ml-auto">
-        <Nav.Link href="#home" className="custom"><FontAwesomeIcon icon="home"/> <span>Home</span> </Nav.Link>
-        <Nav.Link href="#features" className="custom"><FontAwesomeIcon icon="newspaper"/> <span>blog</span></Nav.Link>
-        <Nav.Link href="#pricing" className="custom"><FontAwesomeIcon icon="camera-retro"/> <span>gallery</span></Nav.Link>
+        <Nav.Link as={Link} className="custom" to='/'><FontAwesomeIcon icon="home"/> <span>Home</span> </Nav.Link>
+        <Nav.Link as={Link} className="custom" to='/blog'><FontAwesomeIcon icon="newspaper"/> <span>blog</span></Nav.Link>
+        <Nav.Link as={Link} className="custom" to='/gallery'><FontAwesomeIcon icon="camera-retro"/> <span>gallery</span></Nav.Link>
       </Nav>
-      {/* <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-info">Search</Button>
-      </Form> */}
     </Navbar>
     </div>
     );
