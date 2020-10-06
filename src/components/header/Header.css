@@ -1,0 +1,19 @@
+/*
+ * Header css File
+*/
+
+nav {
+font-size: 18px;
+}
+
+.custom span{
+    color:white;
+    font-size:12px;
+    padding:0;
+    display:block;
+    text-transform:uppercase;
+    /* font-family:'Josefin Sans'; */
+    letter-spacing:1px;
+  }
+
+a:hover { color: #FF0000; }

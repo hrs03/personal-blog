@@ -3,10 +3,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
+import Header from './components/header/Header'
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faHome, faNewspaper, faCameraRetro } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faCheckSquare, faCoffee, faHome, faNewspaper, faCameraRetro)
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
