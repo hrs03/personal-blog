@@ -19,9 +19,9 @@ class Footer extends Component {
 
   render() {
     return (
-        <div className="footer-copyright text-center py-3 bg-dark">
+        <div className="footer-copyright text-right py-3 bg-dark mb-0" >
         <Container fluid style={{color: "white"}}>
-          &copy; {new Date().getFullYear()} Copyright: <span>Mohammed Hiras</span>
+          &copy; <span>Mohammed Hiras</span>
         </Container>
       </div>
     );

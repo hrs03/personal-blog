@@ -16,4 +16,7 @@ font-size: 18px;
     letter-spacing:1px;
   }
 
-a:hover { color: #FF0000; }
+/* a:hover { color: #FF0000; } */
+.active {
+  border-bottom: 3px solid red;
+}
