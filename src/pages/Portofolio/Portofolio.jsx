@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Portofolio.css";
 import { Container, Row, Button, Image, Card } from "react-bootstrap";
+import GithubProfile from '../../components/Github-profile/Github-profile'
 
 class Portofolio extends Component {
   // constructor(props){
@@ -19,6 +20,7 @@ class Portofolio extends Component {
 
   render() {
     return (
+
       <div>
         <Container fluid className="bg-dark">
           <div>
@@ -39,7 +41,10 @@ class Portofolio extends Component {
               </Card.Text>
             </Card.Body>
           </Card>
+        
         </Container>
+        <GithubProfile />
+        
       </div>
     );
   }
